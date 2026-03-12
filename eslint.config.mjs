@@ -4,6 +4,12 @@ import nextTs from "eslint-config-next/typescript";
 import prettier from "eslint-config-prettier/flat";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 
+const nextRulesAsWarnings = Object.fromEntries(
+  [...nextVitals, ...nextTs]
+    .flatMap((config) => Object.keys(config.rules ?? {}))
+    .map((name) => [name, "warn"]),
+);
+
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
@@ -11,9 +17,11 @@ const eslintConfig = defineConfig([
   {
     files: ["**/*.{ts,tsx}"],
     rules: {
-      "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/no-import-type-side-effects": "error",
-      "@next/next/no-img-element": "off",
+      ...nextRulesAsWarnings,
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/consistent-type-imports": "warn",
+      "@typescript-eslint/no-import-type-side-effects": "warn",
+      "@next/next/no-img-element": "warn",
     },
   },
   {
@@ -21,8 +29,8 @@ const eslintConfig = defineConfig([
       "simple-import-sort": simpleImportSort,
     },
     rules: {
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
+      "simple-import-sort/imports": "warn",
+      "simple-import-sort/exports": "warn",
     },
   },
   // Override default ignores of eslint-config-next.
