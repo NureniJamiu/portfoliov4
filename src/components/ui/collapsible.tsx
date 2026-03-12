@@ -9,24 +9,18 @@ function Collapsible(
 }
 
 function CollapsibleTrigger(
-  props: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleTrigger>
+  props: React.ComponentProps<typeof CollapsiblePrimitive.Trigger>
 ) {
   return (
-    <CollapsiblePrimitive.CollapsibleTrigger
-      data-slot="collapsible-trigger"
-      {...props}
-    />
+    <CollapsiblePrimitive.Trigger data-slot="collapsible-trigger" {...props} />
   )
 }
 
 function CollapsibleContent(
-  props: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleContent>
+  props: React.ComponentProps<typeof CollapsiblePrimitive.Content>
 ) {
   return (
-    <CollapsiblePrimitive.CollapsibleContent
-      data-slot="collapsible-content"
-      {...props}
-    />
+    <CollapsiblePrimitive.Content data-slot="collapsible-content" {...props} />
   )
 }
 
