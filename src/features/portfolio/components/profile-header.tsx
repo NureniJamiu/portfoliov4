@@ -48,11 +48,11 @@ export function ProfileHeader() {
               aria-label="Verified"
             />
 
-            {USER.namePronunciationUrl && (
+            {/* {USER.namePronunciationUrl && (
               <PronounceMyName
                 namePronunciationUrl={USER.namePronunciationUrl}
               />
-            )}
+            )} */}
           </div>
 
           <div className="h-12.5 border-t border-edge py-1 pl-4 sm:h-9">

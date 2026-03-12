@@ -40,8 +40,7 @@ export const USER: User = {
 - Passionate about exploring new technologies and turning ideas into reality through polished, thoughtfully crafted personal projects.
 - Creator of [ReStack](https://re-stack.vercel.app) (2026): enhances Data Structures and Algorithms (DSA) mastery through spaced repititions and daily reminders.
 `,
-  avatar:
-    "https://www.linkedin.com/dms/prv/image/v2/D4D06AQG_8DzGyVgUXQ/messaging-image-720/B4DZzRXaeqG0AY-/0/1773039102867?m=AQICgGgkALSsOwAAAZzRaNJ5wapwKc5CF4pelcWdvc5NOBufFnAMqKXPEA&ne=1&v=beta&t=V3MH0A2oCKgeqxu05GrbfAw2XmyCyEgLN_BQaoMfNFs",
+  avatar: "/penocrat.jpeg",
   ogImage: "/og-jamiunureni.png",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3?v=1",
   timeZone: "Africa/Lagos",
