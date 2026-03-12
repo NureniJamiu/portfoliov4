@@ -1,10 +1,15 @@
 import { USER } from "@/features/portfolio/data/user"
 import type { NavItem } from "@/types/nav"
 
+const SITE_URL = process.env.APP_URL || USER.website
+const OG_IMAGE = USER.ogImage.startsWith("http")
+  ? USER.ogImage
+  : `${SITE_URL}${USER.ogImage}`
+
 export const SITE_INFO = {
   name: USER.displayName,
-  url: process.env.APP_URL || "https://chanhdai.com",
-  ogImage: USER.ogImage,
+  url: SITE_URL,
+  ogImage: OG_IMAGE,
   description: USER.bio,
   keywords: USER.keywords,
 }
