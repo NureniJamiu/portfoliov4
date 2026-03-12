@@ -42,9 +42,7 @@ export const USER: User = {
 `,
   avatar:
     "https://www.linkedin.com/dms/prv/image/v2/D4D06AQG_8DzGyVgUXQ/messaging-image-720/B4DZzRXaeqG0AY-/0/1773039102867?m=AQICgGgkALSsOwAAAZzRaNJ5wapwKc5CF4pelcWdvc5NOBufFnAMqKXPEA&ne=1&v=beta&t=V3MH0A2oCKgeqxu05GrbfAw2XmyCyEgLN_BQaoMfNFs",
-  // remember to change og image
-  ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-dark.png?v=7",
+  ogImage: "/og-jamiunureni.png",
   namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3?v=1",
   timeZone: "Africa/Lagos",
   keywords: [
