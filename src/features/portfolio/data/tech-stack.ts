@@ -13,24 +13,24 @@ export const TECH_STACK: TechStack[] = [
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     categories: ["Language"],
   },
-  {
-    key: "python",
-    title: "Python",
-    href: "https://www.python.org/",
-    categories: ["Language"],
-  },
+  // {
+  //   key: "python",
+  //   title: "Python",
+  //   href: "https://www.python.org/",
+  //   categories: ["Language"],
+  // },
   // {
   //   key: "php",
   //   title: "PHP",
   //   href: "https://www.php.net/",
   //   categories: ["Language"],
   // },
-  {
-    key: "java",
-    title: "Java",
-    href: "https://www.java.com/",
-    categories: ["Language"],
-  },
+  // {
+  //   key: "c++",
+  //   title: "C++",
+  //   href: "https://www.cplusplus.com/",
+  //   categories: ["Language"],
+  // },
   {
     key: "nodejs",
     title: "Node.js",
@@ -187,13 +187,13 @@ export const TECH_STACK: TechStack[] = [
     href: "https://claude.ai/",
     categories: ["Tools", "AI"],
   },
-  {
-    key: "cursor",
-    title: "Cursor",
-    href: "https://cursor.com/",
-    categories: ["Tools", "AI"],
-    theme: true,
-  },
+  // {
+  //   key: "cursor",
+  //   title: "Cursor",
+  //   href: "https://cursor.com/",
+  //   categories: ["Tools", "AI"],
+  //   theme: true,
+  // },
   {
     key: "chatgpt",
     title: "ChatGPT",

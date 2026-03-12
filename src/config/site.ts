@@ -19,27 +19,28 @@ export const MAIN_NAV: NavItem[] = [
     title: "Home",
     href: "/",
   },
-  {
-    title: "UI",
-    href: "/components",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
+  // {
+  //   title: "UI",
+  //   href: "/components",
+  // },
+  // {
+  //   title: "Blog",
+  //   href: "/blog",
+  // },
   // {
   //   title: "Sponsors",
   //   href: "/sponsors",
   // },
 ]
 
-export const X_USERNAME = "@iamncdai"
-export const GITHUB_USERNAME = "ncdai"
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com"
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com"
+export const X_USERNAME = "@iampenocrat"
+export const GITHUB_USERNAME = "nurenijamiu"
+export const SOURCE_CODE_GITHUB_REPO = "nurenijamiu/nurenijamiu.tech"
+export const SOURCE_CODE_GITHUB_URL =
+  "https://github.com/nurenijamiu/nurenijamiu.tech"
 
 export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai"
 
 export const UTM_PARAMS = {
-  utm_source: "chanhdai.com",
+  utm_source: "nurenijamiu.tech",
 }

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <rect width="256" height="256" fill="#000" />
+  <g transform="translate(0 64)">
+    <path
+      fill="#fff"
+      d="M96 32H0V0h96v32ZM96 96H64V0h32v96ZM32 96H0V64h32v32ZM96 128H0V96h96v32ZM160 128h-32V0h32v128ZM192 32h-32V0h32v32ZM224 64h-32V32h32v32ZM256 96h-32V64h32v32ZM256 128h-32V0h32v128Z"
+    />
+  </g>
+</svg>

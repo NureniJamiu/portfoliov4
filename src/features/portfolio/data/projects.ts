@@ -2,8 +2,8 @@ import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
-    id: "react-wheel-picker",
-    title: "React Wheel Picker",
+    id: "restack",
+    title: "ReStack",
     period: {
       start: "05.2025",
     },
@@ -19,43 +19,96 @@ export const PROJECTS: Project[] = [
       "NPM Registry",
       "GitHub Actions",
     ],
-    description: `iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. / Backed by [▲Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker)
-- Natural touch scrolling with smooth inertia, mouse drag and scroll for desktop
-- Infinite loop scrolling
-- Unstyled core for complete style customization
-- Full keyboard navigation and type-ahead search
-`,
+    description: `Built a full-stack DSA revisit system that uses spaced repetition and daily reminders to improve long-term problem retention.
+  - Developed a personalized dashboard to track progress and manage each user's DSA problem backlog in one workflow.
+  - Implemented an intelligent revisit scheduler that prioritizes due problems and automates 1 daily email reminder cycle.
+  - Integrated Clerk authentication for secure sign-in and account management across protected user flows.
+  - Containerized frontend (React + Vite), backend (Go + Gorm), and PostgreSQL with Docker Compose for 1-command local setup and reproducible environments.`,
     logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
     isExpanded: true,
   },
   {
-    id: "chanhdaidotcom",
-    title: "chanhdai.com",
+    id: "auditflow",
+    title: "AuditFlow",
+    period: {
+      start: "05.2025",
+    },
+    link: "",
+    skills: [
+      "Node.js",
+      "Express",
+      "React",
+      "React Router",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "Puppeteer",
+      "Lighthouse",
+      "JWT",
+      "Zustand",
+      "Chart.js",
+    ],
+    description: `Built an automated lead-generation audit platform that scans prospect websites for technical issues and turns results into outreach-ready deliverables.
+- Architected a dual-subdomain setup (auditflow.com + app.auditflow.com) from 1 React codebase with 2 build modes, separating SEO-focused marketing from app workflows.
+- Implemented a 3-tier scan engine: Basic (30-60s), Normal (2-5min), and Advanced (5-15min), balancing scan depth against turnaround time.
+- Delivered 5-dimension scoring (performance, SEO, mobile responsiveness, security, accessibility) with branded PDF/HTML reports and AI-personalized outreach emails.
+- Added CRM and bulk-processing workflows to manage prospect status, follow-ups, and multi-site audits in a single dashboard.`,
+    logo: "https://assets.chanhdai.com/images/project-logos/react-wheel-picker.svg",
+    isExpanded: true,
+  },
+  {
+    id: "amalearn",
+    title: "AmaLearn (LMS)",
     period: {
       start: "01.2025",
     },
-    link: "https://github.com/ncdai/chanhdai.com",
     skills: [
-      "Open Source",
-      "Next.js 16",
-      "Tailwind CSS v4",
-      "Radix UI",
-      "Motion",
-      "shadcn/ui",
-      "shadcn registry",
+      "Next.js",
+      "TypeScript",
+      "LangChain",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "OpenAI",
+      "Pinecone",
       "Vercel",
     ],
-    description:
-      "A minimal, pixel-perfect dev portfolio, shadcn registry, and blog.",
-    logo: "https://assets.chanhdai.com/images/project-logos/chanhdaidotcom.svg",
+    description: `Designed, developed, and deployed a full-stack LMS used by 1200+ project management technology students at Lagos State University.
+- Consolidated 3 core resource types (course materials, past questions, and academic resources) into one searchable learning platform.
+- Implemented RAG-based AI search (OpenAI + Pinecone) so students can query documents and get instant, context-aware answers.
+- Optimized data-fetching with React Query caching and production hardening, sustaining 99% uptime on Vercel.`,
+    link: "#",
   },
   {
-    id: "quaricdotcom",
-    title: "quaric.com",
+    id: "ekopulse",
+    title: "EkoPulse",
+    period: {
+      start: "01.2025",
+    },
+    link: "https://amalearn.nurenijamiu.tech",
+    skills: [
+      "React",
+      "Leaflet",
+      "Node.js",
+      "Express",
+      "Socket.io",
+      "MongoDB",
+      "Clerk",
+      "Vercel",
+    ],
+    description: `Developed a full-stack civic platform that enables Lagos residents to report and track environmental issues through a map-first workflow.
+- Implemented Clerk-based RBAC for 2 user groups (citizens and authorities), securing reporting, assignment, and status-management flows.
+- Built an interactive Leaflet map with real-time Socket.io updates to synchronize issue submissions and status changes as they happen.
+- Integrated Cloudinary media uploads for photo evidence, improving issue verification quality and report clarity.`,
+  },
+  {
+    id: "screenforge",
+    title: "ScreenForge",
     period: {
       start: "03.2024",
     },
-    link: "https://quaric.com",
+    link: "https://screenforge.nurenijamiu.tech",
     skills: [
       "Company Project",
       "Next.js 15",
@@ -68,173 +121,5 @@ export const PROJECTS: Project[] = [
       "NGINX",
     ],
     logo: "https://assets.chanhdai.com/images/project-logos/quaricdotcom.svg",
-  },
-  {
-    id: "zadark",
-    title: "ZaDark",
-    period: {
-      start: "01.2022",
-    },
-    link: "https://zadark.com",
-    skills: [
-      "Pet Project",
-      "Open Source",
-      "Browser Extension",
-      "CLI",
-      "Docusaurus 3",
-    ],
-    description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
-- Earned 10M+ VND in net sales from a paid Safari Extension*
-- 80k+ downloads on SourceForge* (awarded Community Leader badge by SourceForge)
-- 30k+ active users via Chrome Web Store*
-- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
-
-<p class="text-muted-foreground">* Peak metrics recorded; actual current figures may vary.</p>
-`,
-    logo: "https://assets.chanhdai.com/images/project-logos/zadark.svg",
-  },
-  {
-    id: "qabox",
-    title: "QABox",
-    period: {
-      start: "07.2023",
-      end: "07.2023",
-    },
-    link: "https://github.com/ncdai/qabox",
-    skills: [
-      "University Project",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
-    ],
-    description:
-      "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/qabox",
-  },
-  {
-    id: "taskbox",
-    title: "TaskBox",
-    period: {
-      start: "07.2023",
-      end: "07.2023",
-    },
-    link: "https://github.com/ncdai/taskbox",
-    skills: [
-      "University Project",
-      "PHP",
-      "MySQL",
-      "MVC",
-      "Docker",
-      "Docker Compose",
-    ],
-    description:
-      "- Course: Distributed Applications — FIT@HCMUS\n- Project Score: 10/10\n- Source Code: https://github.com/ncdai/taskbox",
-  },
-  {
-    id: "daichat-app",
-    title: "DaiChat App",
-    period: {
-      start: "07.2020",
-      end: "07.2020",
-    },
-    link: "https://www.youtube.com/watch?v=H5U3J_W1low",
-    skills: ["University Project", "Java", "Java Swing", "Java Networking"],
-    description: `- Course: Java Application Programming — FIT@HCMUS
-- Requirement: Developed a real-time chat application using Java technologies
-- Project Score: 10/10
-- Source Code:
-  - Server: https://github.com/ncdai/ltudjava-summer2020-chatapp_server
-  - Client: https://github.com/ncdai/ltudjava-summer2020-chatapp_client`,
-  },
-  {
-    id: "qlsv-app",
-    title: "QLSV App",
-    period: {
-      start: "06.2020",
-      end: "06.2020",
-    },
-    link: "https://www.youtube.com/watch?v=tG9SZEBrwog",
-    skills: ["University Project", "Java", "Java Swing", "Hibernate", "MySQL"],
-    description: `- Course: Java Application Programming — FIT@HCMUS
-- Requirement: Built a student management system with role-based functionalities using Java technologies
-- Project Score: 10/10
-- Source Code: https://github.com/ncdai/ltudjava-summer2020-hibernate`,
-  },
-  {
-    id: "penphy",
-    title: "Penphy",
-    period: {
-      start: "01.2019",
-      end: "08.2019",
-    },
-    link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
-    skills: ["Startup Project", "JavaScript", "React Native"],
-    description: "2nd Prize — Business Startup Competition 2019",
-  },
-  {
-    id: "unlimitedstudy",
-    title: "UnlimitedStudy",
-    period: {
-      start: "01.2017",
-      end: "08.2018",
-    },
-    link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
-    skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-      "jQuery",
-      "Bootstrap 3",
-    ],
-    description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
-- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
-- 1st Prize — Can Tho City Science and Engineering Fair 2018
-- 3rd Prize — National Young Informatics Contest 2018
-- 2nd Prize — Can Tho City Youth and Children's Creativity Contest 2018
-- 3rd Prize — Can Tho City Young Informatics Contest 2018
-- Reached 7k+ users, mainly high school students in Can Tho City
-- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training`,
-  },
-  {
-    id: "dmessage",
-    title: "DMessage",
-    period: {
-      start: "05.2017",
-      end: "05.2017",
-    },
-    link: "https://github.com/ncdai/DMessage",
-    skills: [
-      "Self-learning Project",
-      "Pet Project",
-      "Express.js",
-      "Socket.io",
-      "MongoDB",
-      "Mongoose ODM",
-    ],
-    description:
-      "A Messenger clone built to practice real-time communication using Socket.IO. This project showcases my self-learning journey in implementing WebSockets for instant messaging.",
-  },
-  {
-    id: "study-english",
-    title: "Study English",
-    period: {
-      start: "11.2016",
-      end: "12.2017",
-    },
-    link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
-    skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-    ],
-    description: `Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
-- Consolation Prize — National Youth and Children's Creativity Contest 2016
-- 1st Prize — Can Tho City Youth and Children's Creativity Contest 2016
-- Consolation Prize — Can Tho City Young Informatics Contest 2016`,
   },
 ]
