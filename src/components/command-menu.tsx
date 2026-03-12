@@ -16,11 +16,8 @@ import {
   MoonStarIcon,
   MousePointer2Icon,
   QuoteIcon,
-  RssIcon,
   SunMediumIcon,
-  TextIcon,
   TextInitialIcon,
-  TriangleDashedIcon,
   TypeIcon,
 } from "lucide-react"
 import Image from "next/image"
@@ -72,11 +69,6 @@ const MENU_LINKS: CommandLinkItem[] = [
     title: "UI",
     href: "/components",
     icon: Icons.react,
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-    icon: RssIcon,
   },
   {
     title: "Sponsors",
@@ -145,12 +137,6 @@ const OTHER_LINK_ITEMS: CommandLinkItem[] = [
     title: "llms.txt",
     href: "/llms.txt",
     icon: FileTextIcon,
-    openInNewTab: true,
-  },
-  {
-    title: "RSS Feed",
-    href: "/rss",
-    icon: RssIcon,
     openInNewTab: true,
   },
 ]
@@ -244,7 +230,7 @@ export function CommandMenu({ posts }: { posts: DocPreview[] }) {
     })
   }, [setIsDuckFollowerVisible])
 
-  const { componentLinks, blogLinks } = useMemo(
+  const { componentLinks } = useMemo(
     () => ({
       componentLinks: posts
         .filter((post) => post.category === "components")
@@ -253,9 +239,6 @@ export function CommandMenu({ posts }: { posts: DocPreview[] }) {
             sensitivity: "base",
           })
         )
-        .map(postToCommandLinkItem),
-      blogLinks: posts
-        .filter((post) => post.category !== "components")
         .map(postToCommandLinkItem),
     }),
     [posts]
@@ -322,13 +305,6 @@ export function CommandMenu({ posts }: { posts: DocPreview[] }) {
           />
 
           <CommandLinkGroup
-            heading="Blog"
-            links={blogLinks}
-            fallbackIcon={TextIcon}
-            onLinkSelect={handleOpenLink}
-          />
-
-          <CommandLinkGroup
             heading="Social Links"
             links={SOCIAL_LINK_ITEMS}
             onLinkSelect={handleOpenLink}
@@ -357,13 +333,6 @@ export function CommandMenu({ posts }: { posts: DocPreview[] }) {
             >
               <TypeIcon />
               Copy Logotype as SVG
-            </CommandItem>
-
-            <CommandItem
-              onSelect={() => handleOpenLink("/blog/chanhdai-brand")}
-            >
-              <TriangleDashedIcon />
-              Brand Guidelines
             </CommandItem>
 
             <CommandItem asChild>
@@ -563,16 +532,14 @@ function CommandMenuFooter() {
 }
 
 function postToCommandLinkItem(post: DocPreview): CommandLinkItem {
-  const isComponent = post.category === "components"
-
-  const IconComponent = isComponent
-    ? (props: LucideProps) => <ComponentIcon {...props} variant={post.slug} />
-    : undefined
+  const IconComponent = (props: LucideProps) => (
+    <ComponentIcon {...props} variant={post.slug} />
+  )
 
   return {
     title: post.title,
-    href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
-    keywords: isComponent ? ["component"] : undefined,
+    href: `/components/${post.slug}`,
+    keywords: ["component"],
     icon: IconComponent,
   }
 }

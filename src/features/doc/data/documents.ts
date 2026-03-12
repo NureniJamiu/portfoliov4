@@ -40,8 +40,8 @@ function getMDXData(dir: string) {
 }
 
 export const getAllDocs = cache(() => {
-  return getMDXData(path.join(process.cwd(), "src/features/doc/content")).sort(
-    (a, b) => {
+  return getMDXData(path.join(process.cwd(), "src/features/doc/content"))
+    .sort((a, b) => {
       if (a.metadata.pinned && !b.metadata.pinned) return -1
       if (!a.metadata.pinned && b.metadata.pinned) return 1
 
@@ -49,8 +49,8 @@ export const getAllDocs = cache(() => {
         new Date(b.metadata.createdAt).getTime() -
         new Date(a.metadata.createdAt).getTime()
       )
-    }
-  )
+    })
+    .filter((doc) => doc.metadata?.category === "components")
 })
 
 export function getDocBySlug(slug: string) {

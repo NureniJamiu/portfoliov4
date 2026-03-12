@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation"
 
-import { getAllDocs } from "@/features/doc/data/documents"
+import { getDocsByCategory } from "@/features/doc/data/documents"
 import { getLLMText } from "@/features/doc/lib/get-llm-text"
 
 export async function generateStaticParams() {
-  const docs = getAllDocs()
+  const docs = getDocsByCategory("components")
 
   return docs.map((doc) => ({
     slug: doc.slug,
@@ -17,11 +17,11 @@ export async function GET(
 ) {
   const { slug } = await params
 
-  const allDocs = getAllDocs()
+  const allDocs = getDocsByCategory("components")
   const post = allDocs.find((doc) => doc.slug === slug)
 
   if (!post) {
-    notFound()
+    return notFound()
   }
 
   return new Response(await getLLMText(post), {

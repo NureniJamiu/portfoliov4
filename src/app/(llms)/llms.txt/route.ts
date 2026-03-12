@@ -1,11 +1,11 @@
 import { SITE_INFO } from "@/config/site"
-import { getAllDocs } from "@/features/doc/data/documents"
+import { getDocsByCategory } from "@/features/doc/data/documents"
 
-const allPosts = getAllDocs()
+const allComponents = getDocsByCategory("components")
 
 const content = `# chanhdai.com
 
-> A minimal, pixel-perfect dev portfolio, shadcn registry, and blog to showcase my work as a Design Engineer.
+> A minimal, pixel-perfect dev portfolio and shadcn registry to showcase my work as a Design Engineer.
 
 - [About](${SITE_INFO.url}/about.md): A quick intro to me, my tech stack, and how to connect.
 - [Experience](${SITE_INFO.url}/experience.md): Highlights from my career and key roles I've taken on.
@@ -13,9 +13,9 @@ const content = `# chanhdai.com
 - [Awards](${SITE_INFO.url}/awards.md): My key awards and honors.
 - [Certifications](${SITE_INFO.url}/certifications.md): Certifications and credentials I've earned.
 
-## Blog
+## Components
 
-${allPosts.map((item) => `- [${item.metadata.title}](${SITE_INFO.url}/blog/${item.slug}.mdx): ${item.metadata.description}`).join("\n")}
+${allComponents.map((item) => `- [${item.metadata.title}](${SITE_INFO.url}/components/${item.slug}.mdx): ${item.metadata.description}`).join("\n")}
 `
 
 export const dynamic = "force-static"
