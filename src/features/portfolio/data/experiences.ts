@@ -158,7 +158,7 @@ export const EXPERIENCES: Experience[] = [
         id: "3",
         title: "IU International University of Applied Sciences — Germany",
         employmentPeriod: {
-          start: "08.2018",
+          start: "08.2025",
           end: "2027",
         },
         icon: "education",
@@ -183,7 +183,7 @@ export const EXPERIENCES: Experience[] = [
         id: "2",
         title: "Lagos State University — Nigeria",
         employmentPeriod: {
-          start: "08.2015",
+          start: "03.2022",
           end: "2027",
         },
         icon: "education",
@@ -206,7 +206,7 @@ export const EXPERIENCES: Experience[] = [
         id: "1",
         title: "Newtrend High School",
         employmentPeriod: {
-          start: "08.2011",
+          start: "08.2009",
           end: "06.2014",
         },
         icon: "education",
