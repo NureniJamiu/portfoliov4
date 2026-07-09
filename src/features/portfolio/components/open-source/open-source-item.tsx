@@ -4,6 +4,7 @@ import {
   GitPullRequestClosed,
   GitPullRequestIcon,
 } from "lucide-react"
+import { format } from "date-fns"
 
 import type { PullRequest } from "../../data/open-source"
 
@@ -15,6 +16,15 @@ export function OpenSourceItem({ pr }: { pr: PullRequest }) {
     "https://api.github.com/repos/",
     ""
   )
+
+  let dateText = ""
+  if (isMerged && pr.pull_request?.merged_at) {
+    dateText = `Merged ${format(new Date(pr.pull_request.merged_at), "MMM d, yyyy")}`
+  } else if (isClosed && pr.closed_at) {
+    dateText = `Closed ${format(new Date(pr.closed_at), "MMM d, yyyy")}`
+  } else {
+    dateText = `Opened ${format(new Date(pr.created_at), "MMM d, yyyy")}`
+  }
 
   return (
     <a
@@ -40,6 +50,9 @@ export function OpenSourceItem({ pr }: { pr: PullRequest }) {
         </div>
         <span className="line-clamp-2 font-mono text-sm text-muted-foreground">
           {pr.title}
+        </span>
+        <span className="font-mono text-xs text-muted-foreground/70">
+          {dateText}
         </span>
       </div>
     </a>

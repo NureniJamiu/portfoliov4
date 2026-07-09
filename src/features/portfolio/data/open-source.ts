@@ -8,6 +8,7 @@ export type PullRequest = {
   html_url: string
   state: "open" | "closed"
   created_at: string
+  closed_at: string | null
   pull_request: {
     merged_at: string | null
   }
